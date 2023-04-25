@@ -1,5 +1,8 @@
-import { NextResponse } from 'next/server';
 import { timestamp } from '../../../utilities/timestamp'
+
+timestamp('before require')
+
+import { NextResponse } from 'next/server';
 import getPayloadClient from '../../../payload/payloadClient'
 
 timestamp('outside function')
