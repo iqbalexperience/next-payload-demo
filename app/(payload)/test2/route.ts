@@ -16,3 +16,6 @@ export async function GET() {
   timestamp('after query')
   return NextResponse.json(pages)
 }
+
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
