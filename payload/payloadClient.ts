@@ -1,5 +1,6 @@
 import { getPayload } from "payload/dist/payload";
 import config from './payload.config';
+import { Payload } from "payload";
 
 if (!process.env.MONGODB_URI) {
   throw new Error('MONGODB_URI environment variable is missing')
@@ -22,7 +23,7 @@ if (!cached) {
   cached = (global as any).payload = { client: null, promise: null }
 }
 
-export const getPayloadClient = async () => {
+export const getPayloadClient = async (): Promise<Payload> => {
   if (cached.client) {
     return cached.client
   }
