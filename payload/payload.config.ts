@@ -58,20 +58,7 @@ export default buildConfig({
   admin: {
     bundler: webpackBundler(),
   },
-  collections: [
-    Pages,
-    Users,
-    Media,
-    {
-      slug: "examples",
-      fields: [
-        {
-          name: "title",
-          type: "text",
-        },
-      ],
-    },
-  ],
+  collections: [Pages, Users, Media],
   globals: [MainMenu],
   typescript: {
     outputFile: path.resolve(__dirname, "../payload-types.ts"),
