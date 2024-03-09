@@ -15,7 +15,7 @@ import type { RichTextAdapter } from "payload/types";
 
 const adapter = s3Adapter({
   config: {
-    // endpoint: process.env.NEXT_PUBLIC_S3_ENDPOINT,
+    endpoint: process.env.NEXT_PUBLIC_S3_ENDPOINT,
     region: process.env.S3_REGION,
     forcePathStyle: true,
     credentials: {
